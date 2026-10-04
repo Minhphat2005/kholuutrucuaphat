@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chuyện tình của chúng mình ❤️</title>
+<style>
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:radial-gradient(circle at top,#ff8fab,#7b2cbf 45%,#240046);display:flex;align-items:center;justify-content:center;overflow:hidden}
+body:before{content:"";position:fixed;inset:0;background-image:radial-gradient(#ffffff33 1px,transparent 1px);background-size:30px 30px;pointer-events:none}
+.card{width:min(920px,92%);padding:42px 28px;text-align:center;border:1px solid #ffffff35;border-radius:32px;background:#ffffff18;backdrop-filter:blur(16px);box-shadow:0 25px 80px #0005;position:relative;z-index:2}
+.heart{font-size:64px;animation:pulse 1.4s infinite}.title{font-size:clamp(32px,6vw,62px);margin:8px 0;font-weight:800}.subtitle{font-size:18px;opacity:.9;margin-bottom:30px}
+.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:25px auto;max-width:760px}.unit{padding:22px 10px;border-radius:20px;background:#ffffff18;border:1px solid #ffffff25}.num{font-size:clamp(30px,5vw,52px);font-weight:800}.label{font-size:13px;opacity:.75;text-transform:uppercase;letter-spacing:1px}
+.datebox{margin-top:25px}.datebox input{padding:12px 15px;border:0;border-radius:12px;font-size:16px;background:#fff;color:#333}.btn{margin-left:8px;padding:12px 18px;border:0;border-radius:12px;background:#ff4d8d;color:white;font-weight:700;cursor:pointer}.love{margin-top:25px;font-size:18px}.since{opacity:.8;font-size:14px}
+.hearts span{position:fixed;bottom:-30px;font-size:20px;animation:float 8s linear infinite;opacity:.6}.hearts span:nth-child(1){left:10%;animation-delay:1s}.hearts span:nth-child(2){left:30%;animation-delay:4s}.hearts span:nth-child(3){left:55%;animation-delay:2s}.hearts span:nth-child(4){left:80%;animation-delay:6s}
+@keyframes pulse{50%{transform:scale(1.15)}}@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
+@media(max-width:600px){.timer{grid-template-columns:repeat(2,1fr)}.card{padding:30px 18px}.btn{margin:8px 0 0}}
+</style>
+</head>
+<body>
+<div class="hearts"><span>❤</span><span>💗</span><span>❤</span><span>💖</span></div>
+<main class="card">
+<div class="heart">❤️</div>
+<h1 class="title">Chuyện tình của chúng mình</h1>
+<p class="subtitle">Mỗi ngày bên nhau là một ngày đáng nhớ.</p>
+<div class="timer">
+<div class="unit"><div class="num" id="days">0</div><div class="label">Ngày</div></div>
+<div class="unit"><div class="num" id="hours">00</div><div class="label">Giờ</div></div>
+<div class="unit"><div class="num" id="minutes">00</div><div class="label">Phút</div></div>
+<div class="unit"><div class="num" id="seconds">00</div><div class="label">Giây</div></div>
+</div>
+<div class="love">💞 Yêu nhau được <strong id="daysText">0 ngày</strong> rồi!</div>
+<div class="datebox">
+<div class="since">Ngày bắt đầu yêu</div>
+<input id="start" type="date">
+<button class="btn" onclick="saveDate()">Lưu ngày ❤️</button>
+</div>
+</main>
+<script>
+const input=document.getElementById('start');
+const saved=localStorage.getItem('loveStart');
+input.value=saved||'2025-01-01';
+function saveDate(){if(!input.value)return;localStorage.setItem('loveStart',input.value);update();alert('Đã lưu ngày bắt đầu yêu ❤️')}
+function update(){
+ const start=new Date(input.value+'T00:00:00'), now=new Date();
+ let diff=Math.max(0,now-start), days=Math.floor(diff/86400000);
+ diff%=86400000; let hours=Math.floor(diff/3600000); diff%=3600000;
+ let mins=Math.floor(diff/60000), secs=Math.floor((diff%60000)/1000);
+ document.getElementById('days').textContent=days;
+ document.getElementById('hours').textContent=String(hours).padStart(2,'0');
+ document.getElementById('minutes').textContent=String(mins).padStart(2,'0');
+ document.getElementById('seconds').textContent=String(secs).padStart(2,'0');
+ document.getElementById('daysText').textContent=days+' ngày';
+}
+update();setInterval(update,1000);
+</script>
+</body></html>
