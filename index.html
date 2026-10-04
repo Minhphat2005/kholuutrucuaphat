@@ -1,56 +1,50 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Chuyện tình của chúng mình ❤️</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Phát ❤️ Kiều | Câu chuyện của chúng mình</title>
+<meta name="description" content="Phan Nguyễn Minh Phát ❤️ Nguyễn Thúy Kiều — cùng nhau viết nên câu chuyện của chúng mình.">
 <style>
-*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:radial-gradient(circle at top,#ff8fab,#7b2cbf 45%,#240046);display:flex;align-items:center;justify-content:center;overflow:hidden}
-body:before{content:"";position:fixed;inset:0;background-image:radial-gradient(#ffffff33 1px,transparent 1px);background-size:30px 30px;pointer-events:none}
-.card{width:min(920px,92%);padding:42px 28px;text-align:center;border:1px solid #ffffff35;border-radius:32px;background:#ffffff18;backdrop-filter:blur(16px);box-shadow:0 25px 80px #0005;position:relative;z-index:2}
-.heart{font-size:64px;animation:pulse 1.4s infinite}.title{font-size:clamp(32px,6vw,62px);margin:8px 0;font-weight:800}.subtitle{font-size:18px;opacity:.9;margin-bottom:30px}
-.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:25px auto;max-width:760px}.unit{padding:22px 10px;border-radius:20px;background:#ffffff18;border:1px solid #ffffff25}.num{font-size:clamp(30px,5vw,52px);font-weight:800}.label{font-size:13px;opacity:.75;text-transform:uppercase;letter-spacing:1px}
-.datebox{margin-top:25px}.datebox input{padding:12px 15px;border:0;border-radius:12px;font-size:16px;background:#fff;color:#333}.btn{margin-left:8px;padding:12px 18px;border:0;border-radius:12px;background:#ff4d8d;color:white;font-weight:700;cursor:pointer}.love{margin-top:25px;font-size:18px}.since{opacity:.8;font-size:14px}
-.hearts span{position:fixed;bottom:-30px;font-size:20px;animation:float 8s linear infinite;opacity:.6}.hearts span:nth-child(1){left:10%;animation-delay:1s}.hearts span:nth-child(2){left:30%;animation-delay:4s}.hearts span:nth-child(3){left:55%;animation-delay:2s}.hearts span:nth-child(4){left:80%;animation-delay:6s}
-@keyframes pulse{50%{transform:scale(1.15)}}@keyframes float{to{transform:translateY(-110vh) rotate(360deg);opacity:0}}
-@media(max-width:600px){.timer{grid-template-columns:repeat(2,1fr)}.card{padding:30px 18px}.btn{margin:8px 0 0}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,sans-serif;color:#fff;background:linear-gradient(135deg,#190019,#4b164c 48%,#ff5d8f);min-height:100vh;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.25;background-image:radial-gradient(#fff 1px,transparent 1px);background-size:34px 34px}
+.wrap{width:min(1050px,92%);margin:auto}.hero{text-align:center;padding:70px 0 35px}.badge{display:inline-block;padding:8px 15px;border:1px solid #ffffff40;border-radius:999px;background:#ffffff15;font-size:13px;letter-spacing:1px}.heart{font-size:70px;animation:pulse 1.5s infinite;filter:drop-shadow(0 8px 20px #ff477e88)}h1{font-size:clamp(38px,8vw,78px);line-height:1.05;margin:8px 0;background:linear-gradient(90deg,#fff,#ffd6e5,#fff);-webkit-background-clip:text;color:transparent}.hero p{font-size:18px;opacity:.88}.names{font-size:clamp(18px,4vw,28px);font-weight:700}.grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin:25px 0}.panel{padding:28px;border:1px solid #ffffff30;background:#ffffff12;backdrop-filter:blur(18px);border-radius:28px;box-shadow:0 20px 60px #0003}.person{text-align:center}.avatar{width:95px;height:95px;margin:0 auto 15px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#ff8fab,#7b2cbf);font-size:38px;border:3px solid #ffffff50}.person h2{margin:8px 0;font-size:22px}.person p{margin:7px 0;opacity:.8}.timer{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:22px 0}.unit{text-align:center;padding:20px 8px;border-radius:20px;background:#00000020;border:1px solid #ffffff20}.num{font-size:clamp(30px,6vw,52px);font-weight:800}.label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;opacity:.7}.love{text-align:center;font-size:21px;margin:20px 0}.datebox{text-align:center;margin-top:22px}.datebox input{padding:12px;border:0;border-radius:12px;font-size:16px}.btn{padding:12px 18px;margin-left:7px;border:0;border-radius:12px;background:#ff477e;color:#fff;font-weight:800;cursor:pointer;box-shadow:0 8px 20px #ff477e44}.btn:hover{transform:translateY(-1px)}.story{text-align:center;padding:35px 10px}.quote{font-size:clamp(20px,4vw,30px);font-style:italic;line-height:1.5}.footer{text-align:center;padding:30px 0 55px;opacity:.75}.float{position:fixed;bottom:-40px;z-index:0;animation:rise linear forwards;pointer-events:none}@keyframes pulse{50%{transform:scale(1.12)}}@keyframes rise{to{transform:translateY(-115vh) rotate(360deg);opacity:0}}@media(max-width:650px){.grid{grid-template-columns:1fr}.timer{grid-template-columns:repeat(2,1fr)}.hero{padding-top:45px}.panel{padding:22px}.btn{margin:8px 0 0;width:100%}}
 </style>
 </head>
 <body>
-<div class="hearts"><span>❤</span><span>💗</span><span>❤</span><span>💖</span></div>
-<main class="card">
+<div class="wrap">
+<section class="hero">
+<div class="badge">MỘT CÂU CHUYỆN • HAI TRÁI TIM • MỘT TÌNH YÊU</div>
 <div class="heart">❤️</div>
-<h1 class="title">Chuyện tình của chúng mình</h1>
-<p class="subtitle">Mỗi ngày bên nhau là một ngày đáng nhớ.</p>
+<h1>Phát &amp; Kiều</h1>
+<div class="names">Phan Nguyễn Minh Phát 💕 Nguyễn Thúy Kiều</div>
+<p>“Cảm ơn vì đã xuất hiện trong cuộc đời của nhau.”</p>
+</section>
+<section class="grid">
+<div class="panel person"><div class="avatar">🧑🏻</div><h2>Phan Nguyễn Minh Phát</h2><p>🎂 12/05/2005</p><p>Tuổi: <strong id="agePhat">—</strong></p><p>💙 Người luôn cố gắng vì tương lai của chúng mình</p></div>
+<div class="panel person"><div class="avatar">👩🏻</div><h2>Nguyễn Thúy Kiều</h2><p>🎂 12/04/2007</p><p>Tuổi: <strong id="ageKieu">—</strong></p><p>💗 Một người đặc biệt trong trái tim Phát</p></div>
+</section>
+<section class="panel">
+<div class="love">💞 Hai chúng mình đã bên nhau được...</div>
 <div class="timer">
 <div class="unit"><div class="num" id="days">0</div><div class="label">Ngày</div></div>
 <div class="unit"><div class="num" id="hours">00</div><div class="label">Giờ</div></div>
 <div class="unit"><div class="num" id="minutes">00</div><div class="label">Phút</div></div>
 <div class="unit"><div class="num" id="seconds">00</div><div class="label">Giây</div></div>
 </div>
-<div class="love">💞 Yêu nhau được <strong id="daysText">0 ngày</strong> rồi!</div>
-<div class="datebox">
-<div class="since">Ngày bắt đầu yêu</div>
-<input id="start" type="date">
-<button class="btn" onclick="saveDate()">Lưu ngày ❤️</button>
+<div class="love">Yêu nhau được <strong id="daysText">0 ngày</strong> rồi! ❤️</div>
+<div class="datebox"><div>📅 Ngày chính thức bên nhau</div><br><input id="start" type="date"><button class="btn" onclick="saveDate()">Lưu ngày ❤️</button></div>
+</section>
+<section class="story"><div class="quote">“Không cần một tình yêu hoàn hảo,<br>chỉ cần hai người luôn chọn nhau.”</div></section>
+<footer class="footer">Made with ❤️ for Phát &amp; Kiều<br>© 2026 — Câu chuyện của chúng mình</footer>
 </div>
-</main>
 <script>
-const input=document.getElementById('start');
-const saved=localStorage.getItem('loveStart');
-input.value=saved||'2025-01-01';
-function saveDate(){if(!input.value)return;localStorage.setItem('loveStart',input.value);update();alert('Đã lưu ngày bắt đầu yêu ❤️')}
-function update(){
- const start=new Date(input.value+'T00:00:00'), now=new Date();
- let diff=Math.max(0,now-start), days=Math.floor(diff/86400000);
- diff%=86400000; let hours=Math.floor(diff/3600000); diff%=3600000;
- let mins=Math.floor(diff/60000), secs=Math.floor((diff%60000)/1000);
- document.getElementById('days').textContent=days;
- document.getElementById('hours').textContent=String(hours).padStart(2,'0');
- document.getElementById('minutes').textContent=String(mins).padStart(2,'0');
- document.getElementById('seconds').textContent=String(secs).padStart(2,'0');
- document.getElementById('daysText').textContent=days+' ngày';
-}
+const input=document.getElementById('start');input.value=localStorage.getItem('loveStart')||'2025-01-01';
+function age(y,m,d){const n=new Date();return n.getFullYear()-y-((n.getMonth()+1<m)||(n.getMonth()+1===m&&n.getDate()<d)?1:0)}
+document.getElementById('agePhat').textContent=age(2005,5,12);
+document.getElementById('ageKieu').textContent=age(2007,4,12);
+function saveDate(){if(!input.value)return;localStorage.setItem('loveStart',input.value);update()}
+function update(){const s=new Date(input.value+'T00:00:00'),n=new Date();let d=Math.max(0,n-s),days=Math.floor(d/86400000);d%=86400000;let h=Math.floor(d/3600000);d%=3600000;let m=Math.floor(d/60000),sec=Math.floor((d%60000)/1000);for(const [id,v] of [['days',days],['hours',String(h).padStart(2,'0')],['minutes',String(m).padStart(2,'0')],['seconds',String(sec).padStart(2,'0')]])document.getElementById(id).textContent=v;document.getElementById('daysText').textContent=days+' ngày'}
 update();setInterval(update,1000);
+function heart(){const e=document.createElement('div');e.className='float';e.textContent=['❤','💗','💖','💕'][Math.floor(Math.random()*4)];e.style.left=Math.random()*100+'vw';e.style.fontSize=14+Math.random()*22+'px';e.style.animationDuration=5+Math.random()*5+'s';document.body.appendChild(e);setTimeout(()=>e.remove(),10000)}setInterval(heart,900);
 </script>
 </body></html>
