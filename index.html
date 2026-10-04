@@ -21,19 +21,6 @@
 
 <section class="panel letter"><h2 class="title">💌 Bức thư dành cho Kiều</h2><div class="envelope" onclick="openLetter()"><span>💌 MỞ THƯ</span></div><p>Nhấn vào phong bì để đọc một lời nhắn đặc biệt.</p></section>
 
-<section class="panel" id="diary"><h2 class="title">📖 Nhật ký tình yêu</h2>
-<p style="text-align:center;color:var(--muted)">Những điều nhỏ bé hôm nay sẽ trở thành ký ức quý giá của ngày mai.</p>
-<div class="grid">
-<div><input id="diaryDate" type="date" style="width:100%;padding:12px;border:0;border-radius:12px"><input id="diaryTitle" placeholder="Tên kỷ niệm..." style="width:100%;padding:12px;margin-top:8px;border:0;border-radius:12px"><textarea id="diaryText" placeholder="Hôm nay chúng mình đã..." style="width:100%;height:120px;margin-top:8px;padding:12px;border:0;border-radius:12px;font-family:inherit"></textarea><button class="btn" onclick="addDiary()">💾 Lưu kỷ niệm</button></div>
-<div id="diaryList"><p style="color:var(--muted)">Chưa có kỷ niệm nào. Hãy viết điều đầu tiên cho chúng mình.</p></div></div></section>
-
-<section class="panel" id="future"><h2 class="title">💌 Hộp thư tương lai</h2>
-<p style="text-align:center;color:var(--muted)">Viết một lá thư hôm nay và để tương lai mở nó.</p>
-<input id="letterTitle" placeholder="Tiêu đề lá thư..." style="width:100%;padding:12px;border:0;border-radius:12px">
-<input id="unlockDate" type="date" style="width:100%;padding:12px;margin-top:8px;border:0;border-radius:12px">
-<textarea id="futureText" placeholder="Gửi Phát/Kiều của tương lai..." style="width:100%;height:140px;margin-top:8px;padding:12px;border:0;border-radius:12px;font-family:inherit"></textarea>
-<button class="btn" onclick="saveFutureLetter()">🔐 Cất thư</button><div id="futureList"></div></section>
-
 <section class="panel"><h2 class="title">🏆 Những cột mốc của chúng mình</h2><div id="milestones" class="grid"></div></section>
 
 <section class="panel"><h2 class="title">🗓️ Những ngày đặc biệt</h2><div id="specialDays" class="grid"></div></section>
@@ -62,19 +49,4 @@ document.getElementById('photos').addEventListener('change',e=>{[...e.target.fil
 function shareSite(){if(navigator.share)navigator.share({title:'Phát ❤️ Kiều',text:'Câu chuyện của Phát và Kiều',url:location.href});else navigator.clipboard?.writeText(location.href).then(()=>alert('Đã sao chép link website ❤️'))}
 function toggleMusic(){alert('🎵 Bạn có thể thêm file nhạc MP3 yêu thích vào website ở bước tiếp theo.')} 
 
-const todayISO=()=>new Date().toISOString().slice(0,10);
-document.getElementById('diaryDate').value=todayISO();
-function addDiary(){const date=document.getElementById('diaryDate').value,title=document.getElementById('diaryTitle').value.trim(),text=document.getElementById('diaryText').value.trim();if(!date||!title||!text)return alert('Hãy điền ngày, tiêu đề và nội dung kỷ niệm ❤️');let a=JSON.parse(localStorage.getItem('loveDiary')||'[]');a.push({id:Date.now(),date,title,text});localStorage.setItem('loveDiary',JSON.stringify(a));document.getElementById('diaryTitle').value='';document.getElementById('diaryText').value='';renderDiary();sendLove()}
-function delDiary(id){let a=JSON.parse(localStorage.getItem('loveDiary')||'[]').filter(x=>x.id!==id);localStorage.setItem('loveDiary',JSON.stringify(a));renderDiary()}
-function renderDiary(){let a=JSON.parse(localStorage.getItem('loveDiary')||'[]').sort((x,y)=>y.date.localeCompare(x.date));let el=document.getElementById('diaryList');el.innerHTML=a.length?a.map(x=>'<article class="entry"><small>📅 '+x.date.split('-').reverse().join('/')+'</small><h3>❤️ '+esc(x.title)+'</h3><p>'+esc(x.text).replace(/\n/g,'<br>')+'</p><button class="btn danger" onclick="delDiary('+x.id+')">Xóa</button></article>').join(''):'<p style="color:var(--muted)">Chưa có kỷ niệm nào.</p>'}
-function saveFutureLetter(){const title=document.getElementById('letterTitle').value.trim(),date=document.getElementById('unlockDate').value,text=document.getElementById('futureText').value.trim();if(!title||!date||!text)return alert('Hãy điền đủ thông tin lá thư 💌');if(date<todayISO())return alert('Ngày mở thư phải ở tương lai.');let a=JSON.parse(localStorage.getItem('futureLetters')||'[]');a.push({id:Date.now(),title,date,text});localStorage.setItem('futureLetters',JSON.stringify(a));document.getElementById('letterTitle').value='';document.getElementById('futureText').value='';renderLetters()}
-function delLetter(id){let a=JSON.parse(localStorage.getItem('futureLetters')||'[]').filter(x=>x.id!==id);localStorage.setItem('futureLetters',JSON.stringify(a));renderLetters()}
-function renderLetters(){let a=JSON.parse(localStorage.getItem('futureLetters')||'[]').sort((x,y)=>x.date.localeCompare(y.date));document.getElementById('futureList').innerHTML=a.length?a.map(x=>{let open=todayISO()>=x.date;return '<article class="futureCard '+(open?'unlocked':'')+'"><small>🔐 Mở ngày '+x.date.split('-').reverse().join('/')+'</small><h3>💌 '+esc(x.title)+'</h3><p class="'+(open?'':'locked')+'">'+(open?esc(x.text).replace(/\n/g,'<br>'):'Lá thư đang được giữ kín cho đến ngày đã hẹn...')+'</p><button class="btn danger" onclick="delLetter('+x.id+')">Xóa thư</button></article>'}).join(''):'<p style="color:var(--muted)">Hộp thư đang trống.</p>'}
-function esc(s){return s.replace(/[&<>"']/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]))}
-function daysTogether(){return Math.floor(Math.max(0,new Date()-new Date(LOVE_START+'T00:00:00'))/86400000)}
-function renderMilestones(){let d=daysTogether(),ms=[100,200,365,500,1000],el=document.getElementById('milestones');el.innerHTML=ms.map(n=>'<div class="milestone '+(d>=n?'unlocked':'')+'"><div style="font-size:32px">'+(d>=n?'🏆':'🔒')+'</div><strong>'+n+' ngày</strong><p>'+ (d>=n?'Đã cùng nhau đi qua cột mốc này ❤️':'Còn '+(n-d)+' ngày nữa')+'</p></div>').join('')}
-function nextAnnual(month,day){let n=new Date(),y=n.getFullYear(),d=new Date(y,month-1,day);if(d<=n)d=new Date(y+1,month-1,day);return d}
-function renderSpecial(){let items=[['💍','Ngày quen nhau',new Date('2026-08-20T00:00:00')],['🎂','Sinh nhật Phát',nextAnnual(5,12)],['🎂','Sinh nhật Kiều',nextAnnual(4,12)],['❤️','Kỷ niệm hàng năm',nextAnnual(8,20)]];document.getElementById('specialDays').innerHTML=items.map(x=>{let days=Math.max(0,Math.ceil((x[2]-new Date())/86400000));return '<div class="milestone"><div style="font-size:30px">'+x[0]+'</div><strong>'+x[1]+'</strong><p>'+ (days===0?'Hôm nay ❤️':'Còn '+days+' ngày')+'</p></div>'}).join('')}
-function renderTree(){let d=daysTogether(),level=d<30?'🌱':d<100?'🌿':d<200?'🌳':d<365?'🌸🌳🌸':'🌺🌳🌺';document.getElementById('loveTree').textContent=level;document.getElementById('treeText').textContent='Cây tình yêu lớn lên cùng '+d+' ngày chúng mình đã chọn nhau.'}
-renderDiary();renderLetters();renderMilestones();renderSpecial();renderTree();
 </script></body></html>
