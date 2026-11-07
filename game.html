@@ -1,74 +1,72 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#3b113b">
-<title>Hành Trình Hai Trái Tim 💞 | Phát & Kiều</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#35123c"><title>Phát & Kiều | Vượt Ngàn Thử Thách 💞</title>
 <style>
-:root{color-scheme:dark;--pink:#ff6a9e;--pale:#ffd7e6;--text:#fff;--muted:#edd3e8;--edge:#ffffff30}
-*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 10%,#ed579a4d,transparent 35%),radial-gradient(circle at 90% 25%,#9c59e060,transparent 40%),linear-gradient(145deg,#210825,#51164e 55%,#23112f)}
-main{width:min(760px,92%);margin:0 auto;padding:22px 0 55px}a{color:var(--pale);text-decoration:none}.back{display:inline-block;padding:10px 14px;border:1px solid var(--edge);border-radius:30px;background:#ffffff10}
-header{text-align:center;padding:18px 0 22px}header .heart{font-size:56px;display:block;animation:beat 2s infinite}h1{font-size:clamp(30px,6vw,52px);margin:8px 0}header p,.sub{color:var(--muted);line-height:1.6}section{background:#ffffff12;border:1px solid var(--edge);border-radius:26px;padding:26px;margin:16px 0;box-shadow:0 15px 50px #0002;backdrop-filter:blur(12px)}h2{margin:0 0 14px;font-size:23px}button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:13px 19px;font-weight:750}button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #ffe099;outline-offset:3px}.primary{background:linear-gradient(120deg,#ff477e,#ee72ae);color:#fff;box-shadow:0 8px 24px #ff477e55}.secondary{background:#ffffff1c;border:1px solid var(--edge);color:#fff}.buttonrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:19px}.hidden{display:none!important}.players{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.player{border-radius:18px;text-align:center;padding:18px 8px;background:#ffffff10;border:1px solid var(--edge)}.player strong{display:block;font-size:20px}.tag{color:#ffcede;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:800}.question{font-size:clamp(21px,4.5vw,29px);line-height:1.45;margin:19px 0;font-weight:750}.round{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:14px}.progress{height:10px;background:#ffffff25;border-radius:20px;overflow:hidden;margin:12px 0 20px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff6089,#ffc1dc);transition:width .3s}.who{display:inline-block;background:#ff477e36;border:1px solid #ff93b5;border-radius:30px;padding:8px 13px;font-weight:800}.hint{font-size:14px;color:var(--muted);line-height:1.6}textarea{display:block;width:100%;min-height:110px;resize:vertical;margin:14px 0;padding:15px;border-radius:15px;color:#fff;background:#1b0b2499;border:1px solid #ffffff55;font:inherit}textarea::placeholder{color:#ccb1c6}.memory{margin:13px 0;padding:14px 16px;background:#ffffff0d;border-radius:15px;border:1px solid #ffffff24}.memory strong{color:#ffb7d0}.memory p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55;margin:8px 0}.finish{text-align:center}.trophy{font-size:68px}.finish h2{font-size:29px}.notice{background:#ffffff14;padding:13px;border-radius:14px;color:var(--muted);line-height:1.6}.stats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.stat{border:1px solid var(--edge);padding:12px;border-radius:15px}.footer{text-align:center;color:var(--muted);padding:18px}.confetti{position:fixed;pointer-events:none;z-index:10;animation:fly 2.6s ease-out forwards}@keyframes beat{50%{transform:scale(1.12)}}@keyframes fly{to{transform:translate(var(--dx),-70vh) rotate(300deg);opacity:0}}@media(max-width:500px){section{padding:19px}.buttonrow button{flex:1 1 100%}.players{gap:7px}.player{padding:14px 5px}}
-</style>
-</head>
-<body><main>
-<a class="back" href="./index.html">← Về câu chuyện của chúng mình</a>
-<header><span class="heart">💞</span><div class="tag">Phát & Kiều • Together forever</div><h1>Hành Trình Hai Trái Tim</h1><p>Không cần thắng thua, chỉ cần mình hiểu và thương nhau nhiều hơn một chút mỗi ngày.</p></header>
-<section id="intro">
-<h2>🌷 Chào mừng hai trái tim</h2>
-<p class="sub">Một chuyến phiêu lưu gồm 3 chặng và 12 câu hỏi. Phát và Kiều thay phiên trả lời, lắng nghe nhau và tạo nên một cuốn nhật ký nhỏ của riêng hai đứa.</p>
-<div class="players"><div class="player">🧑🏻<strong>Phát</strong><span class="hint">Người chơi 1</span></div><div class="player">👩🏻<strong>Kiều</strong><span class="hint">Người chơi 2</span></div></div>
-<p class="notice">💗 Hãy ngồi cạnh nhau hoặc chia sẻ màn hình rồi lần lượt nhập câu trả lời. Trò chơi này chơi luân phiên trên cùng một thiết bị, chưa đồng bộ trực tuyến giữa hai máy.</p>
-<div class="buttonrow"><button id="start" class="primary">💖 Bắt đầu hành trình</button><button id="resume" class="secondary hidden">↩ Tiếp tục hành trình</button></div>
-</section>
-<section id="game" class="hidden" aria-live="polite">
-<div class="round"><span id="chapter">Chặng 1</span><span id="count">1 / 12</span></div><div class="progress" aria-label="Tiến độ"><span id="bar"></span></div>
-<div id="turn" class="who">Đến lượt Phát 🧑🏻</div>
-<div id="question" class="question"></div>
-<p id="prompt" class="hint"></p>
-<label for="answer" class="tag">Lời chia sẻ của bạn</label>
-<textarea id="answer" maxlength="1500" placeholder="Viết điều bạn muốn người ấy biết..."></textarea>
-<div class="buttonrow"><button id="save" class="primary">💌 Lưu lời chia sẻ & tiếp tục</button><button id="skip" class="secondary">Bỏ qua câu này</button></div>
-<p class="hint">Bạn có thể bỏ qua nếu câu hỏi khiến mình không thoải mái. Mỗi câu trả lời chỉ được lưu trên trình duyệt của thiết bị đang chơi.</p>
-</section>
-<section id="end" class="finish hidden" aria-live="polite">
-<div class="trophy">🏡💞</div><h2>Hai trái tim, một hành trình!</h2>
-<p class="sub">Điều quý nhất không phải số câu đã trả lời, mà là những phút giây hai người dành để lắng nghe nhau.</p>
-<div class="stats"><div class="stat">💌 <strong id="answered">0</strong> lời chia sẻ</div><div class="stat">🌷 <strong>3</strong> chặng yêu thương</div></div>
-<div class="buttonrow"><button id="download" class="primary">📖 Tải nhật ký của chúng mình</button><button id="again" class="secondary">🔁 Chơi lại từ đầu</button></div>
-</section>
-<section id="diary" class="hidden"><h2>📚 Nhật ký hai trái tim</h2><div id="entries"></div></section>
-<div class="footer">Made with ❤️ for Phát & Kiều · 20.08.2026</div>
-</main>
+:root{--p:#ff6199;--sky:#d6b9ff;--white:#fff4fa;--line:#ffffff30}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;color:var(--white);font-family:system-ui,-apple-system,Segoe UI,sans-serif;background:radial-gradient(circle at 20% 5%,#b43c9760,transparent 38%),radial-gradient(circle at 85% 40%,#6243b970,transparent 40%),linear-gradient(150deg,#210e2b,#4a194a 60%,#24112f)}
+main{width:min(1060px,96%);margin:0 auto;padding:18px 0 50px}a{color:#ffd5ec;text-decoration:none}.back{display:inline-flex;padding:10px 16px;border:1px solid var(--line);border-radius:25px;background:#ffffff10}
+header{text-align:center;margin:8px auto 20px}h1{font-size:clamp(27px,5vw,44px);margin:8px 0}header p{margin:0;color:#edcbe5}.shell{border:1px solid #ffffff35;background:#ffffff10;box-shadow:0 22px 80px #0005;border-radius:24px;padding:15px}.hud{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:0 5px 12px}.stat{background:#220c3260;padding:9px 13px;border-radius:15px;font-weight:800;font-size:clamp(13px,2.8vw,16px)}.stage{position:relative;border-radius:18px;overflow:hidden;border:2px solid #ffdbf077;background:#271638;touch-action:none}canvas{display:block;width:100%;height:auto;aspect-ratio:840/520}.overlay{position:absolute;inset:0;background:#160b2fe8;display:flex;justify-content:center;align-items:center;padding:14px;overflow:auto}.overlay.hidden{display:none}.overlay-content{width:min(540px,100%);text-align:center;background:linear-gradient(145deg,#702c70,#3e235a);border:1px solid #ffdaec80;border-radius:22px;padding:clamp(15px,4vw,31px);box-shadow:0 15px 50px #0006}.overlay-content h2{font-size:clamp(23px,4vw,33px);margin:7px 0}.overlay-content p{line-height:1.55;color:#ffe8f5}.icon-big{font-size:44px}button{font:inherit;cursor:pointer;touch-action:none;border:none;border-radius:13px;padding:12px 18px;font-weight:800;color:#fff;background:linear-gradient(120deg,#ff477e,#df6bb7);box-shadow:0 5px 18px #0003}button:focus-visible,a:focus-visible{outline:3px solid #ffe292;outline-offset:3px}.secondary{background:#ffffff20;border:1px solid var(--line)}.row{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}.help{margin:15px auto;color:#edcbe5;text-align:center;font-size:14px;line-height:1.6}.legend{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-top:10px;font-size:13px}.legend span{background:#ffffff10;border:1px solid var(--line);padding:7px 11px;border-radius:12px}.controls{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.controller{background:#ffffff0c;border:1px solid #ffffff23;border-radius:18px;text-align:center;padding:9px}.controller h3{font-size:14px;margin:0 0 6px}.pad{display:grid;grid-template-columns:repeat(3,minmax(35px,53px));grid-template-rows:repeat(2,43px);justify-content:center;gap:5px}.pad button{padding:0;font-size:21px;background:#ffffff24;border:1px solid #ffffff45;box-shadow:none;user-select:none;-webkit-user-select:none}.pad button:active,.pad button.held{background:#ff6199}.up{grid-column:2;grid-row:1}.left{grid-column:1;grid-row:2}.down{grid-column:2;grid-row:2}.right{grid-column:3;grid-row:2}.subhead{text-align:center;margin:12px 0 0;color:#edcbe5;font-size:13px}.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}@media(min-width:850px){.pad{grid-template-rows:repeat(2,36px)}.controls{max-width:540px;margin-inline:auto}}@media(max-width:500px){.shell{padding:8px;border-radius:16px}.hud{gap:5px}.stat{padding:6px 9px}.controller{padding:7px}.pad{grid-template-columns:repeat(3,minmax(34px,45px));grid-template-rows:repeat(2,42px)}.overlay-content{padding:12px}.overlay-content p{font-size:13px;margin:5px 0}.overlay-content h2{font-size:22px}.icon-big{font-size:30px}.overlay button{padding:9px 13px}.legend{font-size:12px}}
+</style></head>
+<body><main><a href="./index.html" class="back">← Về trang tình yêu</a>
+<header><h1>🎮 Vượt Ngàn Thử Thách 💞</h1><p>Phát và Kiều cùng nhau bảo vệ những trái tim yêu thương</p></header>
+<div class="shell">
+<div class="hud"><span class="stat" id="level">🏡 Màn 1 / 3</span><span class="stat" id="hearts">💗 0 / 0</span><span class="stat" id="lives">🛡️ 3 cơ hội</span><span class="stat" id="score">⭐ 0</span></div>
+<div class="stage"><canvas id="screen" width="840" height="520" aria-label="Bản đồ game hai nhân vật nhặt trái tim, tránh mây giông và cùng vào cổng"></canvas>
+<div id="overlay" class="overlay"><div class="overlay-content"><div class="icon-big" id="overlayIcon">💗🏡💙</div><h2 id="overlayTitle">Hành trình của chúng mình</h2><p id="overlayText">Phát và Kiều cùng chạy, nhặt đủ trái tim, tránh mây giông rồi cả hai đứng gần chiếc cổng để mở màn tiếp theo! Có 3 màn chơi và một ngôi nhà chờ hai bạn xây dựng.</p><p id="overlayTip">⌨️ Phát: W A S D · Kiều: ↑ ← ↓ →. Trên điện thoại, dùng hai bộ phím điều khiển bên dưới.</p><div class="row"><button id="play">💞 Bắt đầu chơi</button><button id="restart" class="secondary" hidden>🔄 Chơi lại từ đầu</button></div></div></div>
+</div>
+<div class="legend"><span>💙 Phát (WASD)</span><span>💗 Kiều (phím mũi tên)</span><span>💖 Nhặt trái tim</span><span>⛈️ Tránh mây giông</span><span>🚪 Cả hai đến cổng</span></div>
+<div class="controls">
+<div class="controller"><h3>💙 PHÁT</h3><div class="pad" data-player="p"><button class="up" data-dir="up" aria-label="Phát đi lên">↑</button><button class="left" data-dir="left" aria-label="Phát sang trái">←</button><button class="down" data-dir="down" aria-label="Phát đi xuống">↓</button><button class="right" data-dir="right" aria-label="Phát sang phải">→</button></div></div>
+<div class="controller"><h3>💗 KIỀU</h3><div class="pad" data-player="k"><button class="up" data-dir="up" aria-label="Kiều đi lên">↑</button><button class="left" data-dir="left" aria-label="Kiều sang trái">←</button><button class="down" data-dir="down" aria-label="Kiều đi xuống">↓</button><button class="right" data-dir="right" aria-label="Kiều sang phải">→</button></div></div>
+</div><p class="subhead">💌 Hai người phải cùng đến cổng mới có thể hoàn thành mỗi màn.</p>
+</div><p class="help">Cùng phối hợp, không cạnh tranh. Nếu chạm mây giông, cả hai quay về điểm xuất phát và mất một cơ hội. Mỗi màn có thêm thử thách mới!</p></main>
 <script>
 'use strict';
-const questions=[
-['🌱 Chặng 1: Hiểu nhau hơn','Điều nhỏ bé nào anh/em làm khiến bạn cảm thấy được yêu thương?','Kể một điều giản dị nhưng có ý nghĩa với bạn.'],
-['🌱 Chặng 1: Hiểu nhau hơn','Khi buồn, bạn muốn người ấy ở bên theo cách nào?','Không có câu trả lời đúng hay sai.'],
-['🌱 Chặng 1: Hiểu nhau hơn','Có điều gì về bản thân mà bạn muốn người ấy hiểu hơn không?','Hãy lắng nghe mà không phán xét.'],
-['🌱 Chặng 1: Hiểu nhau hơn','Hãy nói 3 điều bạn trân trọng nhất ở người ấy.','Nói thật lòng nhé!'],
-['📸 Chặng 2: Kỷ niệm chúng mình','Khoảnh khắc đầu tiên nào của hai đứa khiến bạn mỉm cười khi nhớ lại?','Nhớ lại câu chuyện của riêng mình.'],
-['📸 Chặng 2: Kỷ niệm chúng mình','Nếu được quay lại một buổi hẹn, bạn chọn ngày nào? Vì sao?','Hãy kể bằng tất cả sự dịu dàng.'],
-['📸 Chặng 2: Kỷ niệm chúng mình','Một câu nói hoặc hành động dễ thương của người ấy mà bạn vẫn nhớ?','Có thể là điều rất nhỏ.'],
-['📸 Chặng 2: Kỷ niệm chúng mình','Cùng nghĩ ra tên cho một kỷ niệm đẹp chưa từng được đặt tên.','Một chút sáng tạo cho hai đứa!'],
-['🌈 Chặng 3: Hẹn ước tương lai','Nếu có một ngày hoàn toàn rảnh, hai đứa sẽ cùng làm gì?','Hãy lên một cuộc hẹn trong mơ.'],
-['🌈 Chặng 3: Hẹn ước tương lai','Có điều mới mẻ nào bạn muốn hai đứa cùng thử trong năm tới?','Một chuyến đi, món ăn hay sở thích mới?'],
-['🌈 Chặng 3: Hẹn ước tương lai','Khi gặp bất đồng, bạn mong hai đứa sẽ cùng giải quyết thế nào?','Tôn trọng và cùng tìm cách nhé.'],
-['🌈 Chặng 3: Hẹn ước tương lai','Hãy viết một lời hứa nhỏ, thực tế mà bạn muốn dành cho người ấy.','Một lời hứa có thể bắt đầu ngay ngày mai.']
+const canvas=document.getElementById('screen'),ctx=canvas.getContext('2d'),W=840,H=520,$=id=>document.getElementById(id);
+const levels=[
+{title:'Khu vườn gặp gỡ 🌷',n:5,storms:1,obstacles:[{x:312,y:115,w:52,h:270},{x:475,y:115,w:52,h:270}],hearts:[[175,135],[192,380],[414,65],[648,135],[650,378]]},
+{title:'Con đường sẻ chia 🌈',n:7,storms:2,obstacles:[{x:205,y:60,w:44,h:270},{x:375,y:190,w:55,h:270},{x:565,y:60,w:44,h:270}],hearts:[[110,120],[292,85],[298,405],[460,95],[506,430],[686,140],[690,395]]},
+{title:'Ngôi nhà hạnh phúc 🏡',n:9,storms:3,obstacles:[{x:205,y:90,w:50,h:140},{x:205,y:300,w:50,h:150},{x:392,y:140,w:54,h:260},{x:580,y:90,w:50,h:140},{x:580,y:300,w:50,h:150}],hearts:[[95,85],[105,425],[295,80],[305,440],[420,88],[522,80],[532,440],[714,90],[714,420]]}
 ];
-const KEY='phat-kieu-love-game-v1';
-let state={step:0,answers:[]};
-const $=id=>document.getElementById(id);
-function store(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){console.warn('Không thể lưu hành trình trên trình duyệt',e)}}
-function restore(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&Number.isInteger(s.step)&&s.step>=0&&s.step<=questions.length&&Array.isArray(s.answers)){return {step:s.step,answers:s.answers.filter(a=>a&&Number.isInteger(a.step)&&a.step>=0&&a.step<questions.length&&typeof a.text==='string').map(a=>({step:a.step,text:a.text.slice(0,1500)}))}}}catch(e){}return null}
-function view(id){['intro','game','end'].forEach(x=>$(x).classList.toggle('hidden',x!==id));$('diary').classList.toggle('hidden',id!=='end')}
-function draw(){if(state.step>=questions.length){finish();return}view('game');const q=questions[state.step];$('chapter').textContent=q[0];$('count').textContent=(state.step+1)+' / '+questions.length;$('bar').style.width=(state.step/questions.length*100)+'%';$('turn').textContent=state.step%2===0?'🧑🏻 Đến lượt Phát':'👩🏻 Đến lượt Kiều';$('question').textContent=q[1];$('prompt').textContent=q[2];$('answer').value='';}
-function next(skip){const v=$('answer').value.trim();if(!skip&&!v){$('answer').focus();$('answer').setCustomValidity('Hãy viết lời chia sẻ hoặc chọn Bỏ qua.');$('answer').reportValidity();$('answer').setCustomValidity('');return}if(!skip){state.answers.push({step:state.step,text:v})}state.step++;store();draw();window.scrollTo({top:0,behavior:'smooth'})}
-function renderDiary(){const container=$('entries');container.replaceChildren();if(!state.answers.length){const p=document.createElement('p');p.className='hint';p.textContent='Chưa có câu trả lời nào được lưu.';container.append(p);return}for(const a of state.answers){const item=document.createElement('article');item.className='memory';const title=document.createElement('strong');title.textContent=(a.step%2===0?'🧑🏻 Phát':'👩🏻 Kiều')+' · '+questions[a.step][0];const q=document.createElement('p');q.textContent=questions[a.step][1];const ans=document.createElement('p');ans.textContent='💌 '+a.text;item.append(title,q,ans);container.append(item)}}
-function celebrate(){for(let i=0;i<32;i++){const e=document.createElement('span');e.className='confetti';e.textContent=['💗','💕','✨','🌷'][i%4];e.style.left=Math.random()*100+'vw';e.style.top=(60+Math.random()*30)+'vh';e.style.setProperty('--dx',Math.random()*300-150+'px');document.body.append(e);setTimeout(()=>e.remove(),2700)}}
-function finish(){view('end');$('answered').textContent=state.answers.length;renderDiary();celebrate()}
-function restart(){if(restore()&&!confirm('Bắt đầu lại sẽ thay thế những câu trả lời đã lưu trên thiết bị này. Bạn muốn tiếp tục?'))return;state={step:0,answers:[]};store();draw()}
-function download(){const lines=['NHẬT KÝ HAI TRÁI TIM — PHÁT & KIỀU','Ngày xuất: '+new Date().toLocaleDateString('vi-VN'),''];for(const a of state.answers){lines.push((a.step%2===0?'Phát':'Kiều')+' — '+questions[a.step][0],questions[a.step][1],a.text,'')}if(!state.answers.length)lines.push('Chúng mình đã cùng nhau hoàn thành hành trình.');const blob=new Blob(['\uFEFF'+lines.join('\n')],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='nhat-ky-phat-kieu.txt';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
-$('start').addEventListener('click',restart);$('resume').addEventListener('click',()=>{state=restore()||{step:0,answers:[]};draw()});$('save').addEventListener('click',()=>next(false));$('skip').addEventListener('click',()=>next(true));$('again').addEventListener('click',restart);$('download').addEventListener('click',download);
-if(restore())$('resume').classList.remove('hidden');
+let phase='intro',levelIndex=0,lives=3,score=0,collected=0,remaining=[],stormList=[],players=[],time=0,last=0,invuln=0,raf=0;
+const held={p:new Set(),k:new Set()};const keys=new Set();let justWon=false;
+function clearInputs(){keys.clear();held.p.clear();held.k.clear();document.querySelectorAll('.held').forEach(b=>b.classList.remove('held'))}
+function setOverlay(icon,title,desc,tip,play,restart){$('overlayIcon').textContent=icon;$('overlayTitle').textContent=title;$('overlayText').textContent=desc;$('overlayTip').textContent=tip||'';$('play').textContent=play;$('restart').hidden=!restart;$('overlay').classList.remove('hidden')}
+function hideOverlay(){$('overlay').classList.add('hidden')}
+function makePlayers(){players=[{id:'p',x:72,y:258,c:'#70d9ff',name:'Phát',spawnX:72,spawnY:258},{id:'k',x:72,y:318,c:'#ff85b6',name:'Kiều',spawnX:72,spawnY:318}]}
+function loadLevel(){let l=levels[levelIndex];collected=0;remaining=l.hearts.map(([x,y])=>({x,y,got:false}));stormList=Array.from({length:l.storms},(_,i)=>({x:300+i*160,y:270+(i%2)*65,r:18,offset:i*2.5,vy:65+i*18}));makePlayers();invuln=1.7;clearInputs();updateHud()}
+function updateHud(){$('level').textContent='🏡 Màn '+(levelIndex+1)+' / 3';$('hearts').textContent='💗 '+collected+' / '+levels[levelIndex].n;$('lives').textContent='🛡️ '+lives+' cơ hội';$('score').textContent='⭐ '+score}
+function start(){levelIndex=0;lives=3;score=0;time=0;justWon=false;loadLevel();phase='playing';hideOverlay();last=performance.now()}
+function continueLevel(){levelIndex++;loadLevel();phase='playing';hideOverlay();last=performance.now()}
+function clamp(n,min,max){return Math.max(min,Math.min(max,n))}
+function rectCircle(x,y,r,o){let nx=clamp(x,o.x,o.x+o.w),ny=clamp(y,o.y,o.y+o.h);return Math.hypot(x-nx,y-ny)<r}
+function move(p,dx,dy){const r=16,blocks=levels[levelIndex].obstacles;let x=clamp(p.x+dx,22,W-22),y=clamp(p.y+dy,24,H-25);if(!blocks.some(o=>rectCircle(x,p.y,r,o)))p.x=x;if(!blocks.some(o=>rectCircle(p.x,y,r,o)))p.y=y}
+function direction(id){let a=held[id],key=id==='p'?{up:'w',down:'s',left:'a',right:'d'}:{up:'arrowup',down:'arrowdown',left:'arrowleft',right:'arrowright'};let x=Number(a.has('right')||keys.has(key.right))-Number(a.has('left')||keys.has(key.left));let y=Number(a.has('down')||keys.has(key.down))-Number(a.has('up')||keys.has(key.up));let d=Math.hypot(x,y)||1;return [x/d,y/d]}
+function hit(){if(invuln>0)return;lives--;invuln=2;if(lives<=0){phase='lost';clearInputs();setOverlay('💗','Chúng mình thử lại nhé!','Đường tới hạnh phúc đôi khi có chút giông bão. Cùng nhau thử lại từ đầu nào.','Điểm của hai bạn: '+score,'💪 Thử lại',false);return}players.forEach(p=>{p.x=p.spawnX;p.y=p.spawnY});updateHud()}
+function tick(dt){time+=dt;invuln=Math.max(0,invuln-dt);const l=levels[levelIndex];players.forEach(p=>{let [dx,dy]=direction(p.id);move(p,dx*188*dt,dy*188*dt)});
+for(const h of remaining)if(!h.got&&players.some(p=>Math.hypot(p.x-h.x,p.y-h.y)<27)){h.got=true;collected++;score+=100;updateHud()}
+for(const [i,s] of stormList.entries()){s.y=255+Math.sin(time*(.85+i*.18)+s.offset)*165;s.x=300+i*(levelIndex===2?135:190)+Math.sin(time*.5+i)*28;if(players.some(p=>Math.hypot(p.x-s.x,p.y-s.y)<34))hit()}
+if(phase!=='playing')return;
+if(collected===l.n&&players.every(p=>Math.hypot(p.x-762,p.y-260)<69)){score+=350;updateHud();clearInputs();if(levelIndex===levels.length-1){phase='won';justWon=true;try{let best=Number(localStorage.getItem('phat-kieu-arcade-best')||0);if(score>best)localStorage.setItem('phat-kieu-arcade-best',String(score))}catch(e){}setOverlay('🏡💞','Ngôi nhà của chúng mình!','Phát và Kiều đã cùng vượt qua cả 3 màn chơi! Khi hai trái tim chung một hướng, mọi thử thách đều trở nên nhẹ nhàng hơn.','Tổng điểm: '+score+' ⭐ · Hai bạn đã cùng xây tổ ấm.','🎮 Chơi lại',false)}else{phase='between';setOverlay('🌷💖','Hoàn thành '+l.title,'Tuyệt vời! Hai bạn đã nhặt đủ trái tim và cùng nhau đến cổng.','Cộng 350 điểm phối hợp!','➡️ Sang màn '+(levelIndex+2),true)}}}
+function rounded(x,y,w,h,r,fill){ctx.fillStyle=fill;ctx.beginPath();ctx.roundRect(x,y,w,h,r);ctx.fill()}
+function drawHeart(x,y,size,color){ctx.save();ctx.translate(x,y);ctx.scale(size/20,size/20);ctx.beginPath();ctx.moveTo(0,8);ctx.bezierCurveTo(-22,-5,-10,-19,0,-9);ctx.bezierCurveTo(10,-19,22,-5,0,8);ctx.fillStyle=color;ctx.fill();ctx.restore()}
+function draw(){const grd=ctx.createLinearGradient(0,0,W,H);grd.addColorStop(0,'#3b2b67');grd.addColorStop(1,'#713c78');ctx.fillStyle=grd;ctx.fillRect(0,0,W,H);
+ctx.globalAlpha=.18;for(let x=18;x<W;x+=48)for(let y=18;y<H;y+=48){ctx.beginPath();ctx.arc(x,y,2.2,0,Math.PI*2);ctx.fillStyle='#fff';ctx.fill()}ctx.globalAlpha=1;
+rounded(17,14,806,492,19,'#ffffff0b');ctx.strokeStyle='#ffd7ee44';ctx.lineWidth=3;ctx.strokeRect(18,15,804,490);
+for(let i=0;i<14;i++){let x=(i*131+38)%W,y=(i*97+49)%H;drawHeart(x,y,6,'#ffffff21')}
+for(const o of levels[levelIndex].obstacles){rounded(o.x,o.y,o.w,o.h,14,'#8d6ea8');rounded(o.x+5,o.y+5,o.w-10,o.h-10,10,'#b39ec8');ctx.fillStyle='#e8d1f2';ctx.fillRect(o.x+o.w/2-2,o.y+10,4,o.h-20)}
+rounded(726,204,88,110,17,collected===levels[levelIndex].n?'#93ddbb':'#ad839c');rounded(737,215,66,90,12,collected===levels[levelIndex].n?'#4d9f89':'#604367');ctx.fillStyle='#fff';ctx.textAlign='center';ctx.font='35px system-ui';ctx.fillText(collected===levels[levelIndex].n?'🏡':'🔒',770,272);ctx.font='bold 13px system-ui';ctx.fillText('CÙNG VỀ',770,300);
+for(const h of remaining)if(!h.got){ctx.shadowColor='#ffafcd';ctx.shadowBlur=17;drawHeart(h.x,h.y+Math.sin(time*3+h.x)*3,22,'#ff82b6');ctx.shadowBlur=0}
+for(const s of stormList){ctx.fillStyle='#4a426e';ctx.beginPath();ctx.arc(s.x-14,s.y+4,17,0,7);ctx.arc(s.x+3,s.y-8,22,0,7);ctx.arc(s.x+19,s.y+4,16,0,7);ctx.fill();ctx.font='22px system-ui';ctx.textAlign='center';ctx.fillText('⚡',s.x+3,s.y+22)}
+for(const p of players){ctx.save();if(invuln>0&&Math.floor(time*9)%2===0)ctx.globalAlpha=.52;ctx.shadowBlur=17;ctx.shadowColor=p.c;ctx.fillStyle=p.c;ctx.beginPath();ctx.arc(p.x,p.y,17,0,Math.PI*2);ctx.fill();ctx.shadowBlur=0;ctx.font='18px system-ui';ctx.textAlign='center';ctx.fillStyle='#33243c';ctx.fillText('♥',p.x,p.y+6);rounded(p.x-29,p.y-35,58,15,8,'#20112bcb');ctx.fillStyle='#fff';ctx.font='bold 12px system-ui';ctx.fillText(p.name,p.x,p.y-23);ctx.restore()}
+if(collected===levels[levelIndex].n){ctx.fillStyle='#fff4e8';ctx.font='bold 18px system-ui';ctx.textAlign='center';ctx.fillText('Cả hai cùng đến cổng! 💞',W/2,35)}
+}
+function frame(ts){const dt=Math.min(.04,(ts-(last||ts))/1000);last=ts;if(phase==='playing')tick(dt);draw();raf=requestAnimationFrame(frame)}
+const controlKeys=new Set(['w','a','s','d','arrowup','arrowdown','arrowleft','arrowright']);
+window.addEventListener('keydown',e=>{const k=e.key.toLowerCase();if(controlKeys.has(k)){e.preventDefault();keys.add(k)}},{passive:false});window.addEventListener('keyup',e=>keys.delete(e.key.toLowerCase()));window.addEventListener('blur',clearInputs);document.addEventListener('visibilitychange',()=>{if(document.hidden)clearInputs()});
+document.querySelectorAll('[data-dir]').forEach(btn=>{const id=btn.closest('[data-player]').dataset.player,dir=btn.dataset.dir;btn.addEventListener('pointerdown',e=>{e.preventDefault();try{btn.setPointerCapture(e.pointerId)}catch(_e){}held[id].add(dir);btn.classList.add('held')});const release=e=>{held[id].delete(dir);btn.classList.remove('held')};btn.addEventListener('pointerup',release);btn.addEventListener('pointercancel',release);btn.addEventListener('lostpointercapture',release)});
+$('play').addEventListener('click',()=>{if(phase==='between')continueLevel();else start()});$('restart').addEventListener('click',start);
+makePlayers();remaining=levels[0].hearts.map(([x,y])=>({x,y,got:false}));updateHud();raf=requestAnimationFrame(frame);
 </script></body></html>
