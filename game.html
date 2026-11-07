@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#3b113b">
+<title>Hành Trình Hai Trái Tim 💞 | Phát & Kiều</title>
+<style>
+:root{color-scheme:dark;--pink:#ff6a9e;--pale:#ffd7e6;--text:#fff;--muted:#edd3e8;--edge:#ffffff30}
+*{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,sans-serif;color:var(--text);background:radial-gradient(circle at 10% 10%,#ed579a4d,transparent 35%),radial-gradient(circle at 90% 25%,#9c59e060,transparent 40%),linear-gradient(145deg,#210825,#51164e 55%,#23112f)}
+main{width:min(760px,92%);margin:0 auto;padding:22px 0 55px}a{color:var(--pale);text-decoration:none}.back{display:inline-block;padding:10px 14px;border:1px solid var(--edge);border-radius:30px;background:#ffffff10}
+header{text-align:center;padding:18px 0 22px}header .heart{font-size:56px;display:block;animation:beat 2s infinite}h1{font-size:clamp(30px,6vw,52px);margin:8px 0}header p,.sub{color:var(--muted);line-height:1.6}section{background:#ffffff12;border:1px solid var(--edge);border-radius:26px;padding:26px;margin:16px 0;box-shadow:0 15px 50px #0002;backdrop-filter:blur(12px)}h2{margin:0 0 14px;font-size:23px}button{font:inherit;cursor:pointer;border:0;border-radius:14px;padding:13px 19px;font-weight:750}button:focus-visible,a:focus-visible,textarea:focus-visible,input:focus-visible{outline:3px solid #ffe099;outline-offset:3px}.primary{background:linear-gradient(120deg,#ff477e,#ee72ae);color:#fff;box-shadow:0 8px 24px #ff477e55}.secondary{background:#ffffff1c;border:1px solid var(--edge);color:#fff}.buttonrow{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:19px}.hidden{display:none!important}.players{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:18px 0}.player{border-radius:18px;text-align:center;padding:18px 8px;background:#ffffff10;border:1px solid var(--edge)}.player strong{display:block;font-size:20px}.tag{color:#ffcede;font-size:13px;letter-spacing:.08em;text-transform:uppercase;font-weight:800}.question{font-size:clamp(21px,4.5vw,29px);line-height:1.45;margin:19px 0;font-weight:750}.round{display:flex;justify-content:space-between;gap:10px;align-items:center;color:var(--muted);font-size:14px}.progress{height:10px;background:#ffffff25;border-radius:20px;overflow:hidden;margin:12px 0 20px}.progress span{display:block;height:100%;width:0;background:linear-gradient(90deg,#ff6089,#ffc1dc);transition:width .3s}.who{display:inline-block;background:#ff477e36;border:1px solid #ff93b5;border-radius:30px;padding:8px 13px;font-weight:800}.hint{font-size:14px;color:var(--muted);line-height:1.6}textarea{display:block;width:100%;min-height:110px;resize:vertical;margin:14px 0;padding:15px;border-radius:15px;color:#fff;background:#1b0b2499;border:1px solid #ffffff55;font:inherit}textarea::placeholder{color:#ccb1c6}.memory{margin:13px 0;padding:14px 16px;background:#ffffff0d;border-radius:15px;border:1px solid #ffffff24}.memory strong{color:#ffb7d0}.memory p{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.55;margin:8px 0}.finish{text-align:center}.trophy{font-size:68px}.finish h2{font-size:29px}.notice{background:#ffffff14;padding:13px;border-radius:14px;color:var(--muted);line-height:1.6}.stats{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.stat{border:1px solid var(--edge);padding:12px;border-radius:15px}.footer{text-align:center;color:var(--muted);padding:18px}.confetti{position:fixed;pointer-events:none;z-index:10;animation:fly 2.6s ease-out forwards}@keyframes beat{50%{transform:scale(1.12)}}@keyframes fly{to{transform:translate(var(--dx),-70vh) rotate(300deg);opacity:0}}@media(max-width:500px){section{padding:19px}.buttonrow button{flex:1 1 100%}.players{gap:7px}.player{padding:14px 5px}}
+</style>
+</head>
+<body><main>
+<a class="back" href="./index.html">← Về câu chuyện của chúng mình</a>
+<header><span class="heart">💞</span><div class="tag">Phát & Kiều • Together forever</div><h1>Hành Trình Hai Trái Tim</h1><p>Không cần thắng thua, chỉ cần mình hiểu và thương nhau nhiều hơn một chút mỗi ngày.</p></header>
+<section id="intro">
+<h2>🌷 Chào mừng hai trái tim</h2>
+<p class="sub">Một chuyến phiêu lưu gồm 3 chặng và 12 câu hỏi. Phát và Kiều thay phiên trả lời, lắng nghe nhau và tạo nên một cuốn nhật ký nhỏ của riêng hai đứa.</p>
+<div class="players"><div class="player">🧑🏻<strong>Phát</strong><span class="hint">Người chơi 1</span></div><div class="player">👩🏻<strong>Kiều</strong><span class="hint">Người chơi 2</span></div></div>
+<p class="notice">💗 Hãy ngồi cạnh nhau hoặc chia sẻ màn hình rồi lần lượt nhập câu trả lời. Trò chơi này chơi luân phiên trên cùng một thiết bị, chưa đồng bộ trực tuyến giữa hai máy.</p>
+<div class="buttonrow"><button id="start" class="primary">💖 Bắt đầu hành trình</button><button id="resume" class="secondary hidden">↩ Tiếp tục hành trình</button></div>
+</section>
+<section id="game" class="hidden" aria-live="polite">
+<div class="round"><span id="chapter">Chặng 1</span><span id="count">1 / 12</span></div><div class="progress" aria-label="Tiến độ"><span id="bar"></span></div>
+<div id="turn" class="who">Đến lượt Phát 🧑🏻</div>
+<div id="question" class="question"></div>
+<p id="prompt" class="hint"></p>
+<label for="answer" class="tag">Lời chia sẻ của bạn</label>
+<textarea id="answer" maxlength="1500" placeholder="Viết điều bạn muốn người ấy biết..."></textarea>
+<div class="buttonrow"><button id="save" class="primary">💌 Lưu lời chia sẻ & tiếp tục</button><button id="skip" class="secondary">Bỏ qua câu này</button></div>
+<p class="hint">Bạn có thể bỏ qua nếu câu hỏi khiến mình không thoải mái. Mỗi câu trả lời chỉ được lưu trên trình duyệt của thiết bị đang chơi.</p>
+</section>
+<section id="end" class="finish hidden" aria-live="polite">
+<div class="trophy">🏡💞</div><h2>Hai trái tim, một hành trình!</h2>
+<p class="sub">Điều quý nhất không phải số câu đã trả lời, mà là những phút giây hai người dành để lắng nghe nhau.</p>
+<div class="stats"><div class="stat">💌 <strong id="answered">0</strong> lời chia sẻ</div><div class="stat">🌷 <strong>3</strong> chặng yêu thương</div></div>
+<div class="buttonrow"><button id="download" class="primary">📖 Tải nhật ký của chúng mình</button><button id="again" class="secondary">🔁 Chơi lại từ đầu</button></div>
+</section>
+<section id="diary" class="hidden"><h2>📚 Nhật ký hai trái tim</h2><div id="entries"></div></section>
+<div class="footer">Made with ❤️ for Phát & Kiều · 20.08.2026</div>
+</main>
+<script>
+'use strict';
+const questions=[
+['🌱 Chặng 1: Hiểu nhau hơn','Điều nhỏ bé nào anh/em làm khiến bạn cảm thấy được yêu thương?','Kể một điều giản dị nhưng có ý nghĩa với bạn.'],
+['🌱 Chặng 1: Hiểu nhau hơn','Khi buồn, bạn muốn người ấy ở bên theo cách nào?','Không có câu trả lời đúng hay sai.'],
+['🌱 Chặng 1: Hiểu nhau hơn','Có điều gì về bản thân mà bạn muốn người ấy hiểu hơn không?','Hãy lắng nghe mà không phán xét.'],
+['🌱 Chặng 1: Hiểu nhau hơn','Hãy nói 3 điều bạn trân trọng nhất ở người ấy.','Nói thật lòng nhé!'],
+['📸 Chặng 2: Kỷ niệm chúng mình','Khoảnh khắc đầu tiên nào của hai đứa khiến bạn mỉm cười khi nhớ lại?','Nhớ lại câu chuyện của riêng mình.'],
+['📸 Chặng 2: Kỷ niệm chúng mình','Nếu được quay lại một buổi hẹn, bạn chọn ngày nào? Vì sao?','Hãy kể bằng tất cả sự dịu dàng.'],
+['📸 Chặng 2: Kỷ niệm chúng mình','Một câu nói hoặc hành động dễ thương của người ấy mà bạn vẫn nhớ?','Có thể là điều rất nhỏ.'],
+['📸 Chặng 2: Kỷ niệm chúng mình','Cùng nghĩ ra tên cho một kỷ niệm đẹp chưa từng được đặt tên.','Một chút sáng tạo cho hai đứa!'],
+['🌈 Chặng 3: Hẹn ước tương lai','Nếu có một ngày hoàn toàn rảnh, hai đứa sẽ cùng làm gì?','Hãy lên một cuộc hẹn trong mơ.'],
+['🌈 Chặng 3: Hẹn ước tương lai','Có điều mới mẻ nào bạn muốn hai đứa cùng thử trong năm tới?','Một chuyến đi, món ăn hay sở thích mới?'],
+['🌈 Chặng 3: Hẹn ước tương lai','Khi gặp bất đồng, bạn mong hai đứa sẽ cùng giải quyết thế nào?','Tôn trọng và cùng tìm cách nhé.'],
+['🌈 Chặng 3: Hẹn ước tương lai','Hãy viết một lời hứa nhỏ, thực tế mà bạn muốn dành cho người ấy.','Một lời hứa có thể bắt đầu ngay ngày mai.']
+];
+const KEY='phat-kieu-love-game-v1';
+let state={step:0,answers:[]};
+const $=id=>document.getElementById(id);
+function store(){try{localStorage.setItem(KEY,JSON.stringify(state))}catch(e){console.warn('Không thể lưu hành trình trên trình duyệt',e)}}
+function restore(){try{const s=JSON.parse(localStorage.getItem(KEY));if(s&&Number.isInteger(s.step)&&s.step>=0&&s.step<=questions.length&&Array.isArray(s.answers)){return {step:s.step,answers:s.answers.filter(a=>a&&Number.isInteger(a.step)&&a.step>=0&&a.step<questions.length&&typeof a.text==='string').map(a=>({step:a.step,text:a.text.slice(0,1500)}))}}}catch(e){}return null}
+function view(id){['intro','game','end'].forEach(x=>$(x).classList.toggle('hidden',x!==id));$('diary').classList.toggle('hidden',id!=='end')}
+function draw(){if(state.step>=questions.length){finish();return}view('game');const q=questions[state.step];$('chapter').textContent=q[0];$('count').textContent=(state.step+1)+' / '+questions.length;$('bar').style.width=(state.step/questions.length*100)+'%';$('turn').textContent=state.step%2===0?'🧑🏻 Đến lượt Phát':'👩🏻 Đến lượt Kiều';$('question').textContent=q[1];$('prompt').textContent=q[2];$('answer').value='';}
+function next(skip){const v=$('answer').value.trim();if(!skip&&!v){$('answer').focus();$('answer').setCustomValidity('Hãy viết lời chia sẻ hoặc chọn Bỏ qua.');$('answer').reportValidity();$('answer').setCustomValidity('');return}if(!skip){state.answers.push({step:state.step,text:v})}state.step++;store();draw();window.scrollTo({top:0,behavior:'smooth'})}
+function renderDiary(){const container=$('entries');container.replaceChildren();if(!state.answers.length){const p=document.createElement('p');p.className='hint';p.textContent='Chưa có câu trả lời nào được lưu.';container.append(p);return}for(const a of state.answers){const item=document.createElement('article');item.className='memory';const title=document.createElement('strong');title.textContent=(a.step%2===0?'🧑🏻 Phát':'👩🏻 Kiều')+' · '+questions[a.step][0];const q=document.createElement('p');q.textContent=questions[a.step][1];const ans=document.createElement('p');ans.textContent='💌 '+a.text;item.append(title,q,ans);container.append(item)}}
+function celebrate(){for(let i=0;i<32;i++){const e=document.createElement('span');e.className='confetti';e.textContent=['💗','💕','✨','🌷'][i%4];e.style.left=Math.random()*100+'vw';e.style.top=(60+Math.random()*30)+'vh';e.style.setProperty('--dx',Math.random()*300-150+'px');document.body.append(e);setTimeout(()=>e.remove(),2700)}}
+function finish(){view('end');$('answered').textContent=state.answers.length;renderDiary();celebrate()}
+function restart(){if(restore()&&!confirm('Bắt đầu lại sẽ thay thế những câu trả lời đã lưu trên thiết bị này. Bạn muốn tiếp tục?'))return;state={step:0,answers:[]};store();draw()}
+function download(){const lines=['NHẬT KÝ HAI TRÁI TIM — PHÁT & KIỀU','Ngày xuất: '+new Date().toLocaleDateString('vi-VN'),''];for(const a of state.answers){lines.push((a.step%2===0?'Phát':'Kiều')+' — '+questions[a.step][0],questions[a.step][1],a.text,'')}if(!state.answers.length)lines.push('Chúng mình đã cùng nhau hoàn thành hành trình.');const blob=new Blob(['\uFEFF'+lines.join('\n')],{type:'text/plain;charset=utf-8'});const url=URL.createObjectURL(blob);const link=document.createElement('a');link.href=url;link.download='nhat-ky-phat-kieu.txt';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000)}
+$('start').addEventListener('click',restart);$('resume').addEventListener('click',()=>{state=restore()||{step:0,answers:[]};draw()});$('save').addEventListener('click',()=>next(false));$('skip').addEventListener('click',()=>next(true));$('again').addEventListener('click',restart);$('download').addEventListener('click',download);
+if(restore())$('resume').classList.remove('hidden');
+</script></body></html>
